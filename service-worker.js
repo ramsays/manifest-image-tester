@@ -31,9 +31,17 @@ self.addEventListener('activate', function (event) {
 
 // Cache first, then network
 self.addEventListener('fetch', function (event) {
-	event.respondWith(
-		caches.match(event.request).then(function (response) {
-			return response || fetch(event.request);
-		}),
-	);
+  event.respondWith(
+    caches.open('image-tester-cache').then(function (cache) {
+      return cache.match(event.request).then(function (response) {
+        return (
+          response ||
+          fetch(event.request).then(function (response) {
+            cache.put(event.request, response.clone());
+            return response;
+          })
+        );
+      });
+    }),
+  );
 });
