@@ -1,0 +1,21 @@
+html {
+	color-scheme: dark light;
+	font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+h1, body {
+	text-align: center;
+}
+
+section {
+	display: flex;
+	justify-content: center;
+}
+
+figure {
+	text-align: center;
+}
+
+figure img {
+	width: 8rem;
+}

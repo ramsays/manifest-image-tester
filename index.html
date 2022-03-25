@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Image Tester</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- Site icons -->
+	<meta name="application-name" content="Image Tester" />
+	<meta name="format-detection" content="telephone=no" />
+
+	<link rel="stylesheet" href="styles.css" />
+	<link rel="manifest" href="pwa/manifest.webmanifest" />
+
+	<script type="text/javascript" defer>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register("pwa/service-worker.js");
+		}
+	</script>
+</head>
+
+<body>
+	<h1>Mainfest Image Tester</h1>
+	<p>Check it! When you install this PWA, you should see where/what images are being used by each OS/device. This can be very useful for dev purposes! The different types are color-coded (general is blue, etc.)</p>
+
+	<section>
+		<figure>
+			<img src="assets/pwa-test-192.png" alt="General icons" />
+			<figcaption>General icons (<code>purpose=any</code>)</figcaption>
+		</figure>
+		<figure>
+			<img src="assets/pwa-test-192-mask.png" alt="Maskable icons" />
+			<figcaption>Maskable icons</figcaption>
+		</figure>
+		<figure>
+			<img src="assets/pwa-test-apple-180.png" alt="Apple icons" />
+			<figcaption>Apple-specific icons</figcaption>
+		</figure>
+</body>
+
+</html>
