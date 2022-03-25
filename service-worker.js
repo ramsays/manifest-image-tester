@@ -4,8 +4,7 @@ self.addEventListener('install', function (event) {
 			return cache.addAll([
 				'index.html',
 				'styles.css',
-				'manifest.webmanifest',
-				'assets/',
+				'manifest.webmanifest'
 			]);
 		}),
 	);
