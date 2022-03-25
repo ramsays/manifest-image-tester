@@ -2,9 +2,13 @@
 	"$schema": "https://json.schemastore.org/web-manifest-combined.json",
 	"name": "Image Tester",
 	"short_name": "Img Tstr",
-	"start_url": "/",
+	"start_url": "/manifest-image-tester/",
+	"scope": "/manifest-image-tester/",
+	"id": "/manifest-image-tester/",
 	"display": "standalone",
 	"background_color": "#420420",
+	"theme_color": "#420420",
+	"orientation": "any",
 	"description": "A simple PWA to see what images are pulled from where when your PWA is installed.",
 	"icons": [
 		{
