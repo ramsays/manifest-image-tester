@@ -2,10 +2,10 @@ self.addEventListener('install', function (event) {
 	event.waitUntil(
 		caches.open('image-tester-cache').then(function (cache) {
 			return cache.addAll([
-				'/index.html',
-				'/styles.css',
-				'/manifest.webmanifest',
-				'/assets/',
+				'index.html',
+				'styles.css',
+				'manifest.webmanifest',
+				'assets/',
 			]);
 		}),
 	);
